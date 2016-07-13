@@ -16,7 +16,7 @@ If you are using Indigo 6 then you will need to install Scene Toggle version 1.1
 About This Repo
 -------------------
 
-This repo is only for Indigo 7 while it is still in BETA, once Indigo 7 drops this repo will merged into the main Powermiser repo.  Access to this repo is private and restricted only to participants in the Indigo 7 BETA, please do not distribute this copy to anyone not participating in the BETA testing.
+This repo is only for Indigo 7 while it is still in BETA, once Indigo 7 drops this repo will merged into the main Scene Toggle repo.  Access to this repo is private and restricted only to participants in the Indigo 7 BETA, please do not distribute this copy to anyone not participating in the BETA testing.
 
 Known Issues / Wish List
 -------------------
