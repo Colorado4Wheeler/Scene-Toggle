@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Actions>
+	<SupportURL>http://forums.indigodomo.com/viewtopic.php?f=194&amp;t=16118</SupportURL>
+	<Action id="turnOn" deviceFilter="self">
+		<Name>Turn scene on</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+	<Action id="turnOff" deviceFilter="self">
+		<Name>Turn scene off</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+	<Action id="toggle" deviceFilter="self">
+		<Name>Toggle scene on/off</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+	<Action id="turnOffAll" deviceFilter="self">
+		<Name>Turn off all scene devices</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+	<Action id="clearMemory" deviceFilter="self">
+		<Name>Clear remembered pre-scene settings</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+	<Action id="saveSnapshot" deviceFilter="self">
+		<Name>Save snapshot</Name>
+		<CallbackMethod>saveSnapshot</CallbackMethod>
+	</Action>
+	
+	<Action id="propertyDump" deviceFilter="self">
+		<Name>Output scene properties to log</Name>
+		<CallbackMethod>sceneAction</CallbackMethod>
+	</Action>
+	
+
+</Actions>

@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+
+<Devices>
+	<Device type="relay" id="epsst">
+		<Name>Scene Device</Name>
+		<ConfigUI>
+		
+			<Field id="lbl1" type="label">
+				<Label>Select devices that can be either turned ON and OFF or DIMMED and BRIGHTENED.  Adding custom devices is not currently supported
+				</Label>
+			</Field>
+		
+			<Field id="toggledevices" type="list" rows="10" >
+				<Label>Device list:</Label>
+				<List class="indigo.devices" />
+			</Field>
+			
+			<Field id="sep2" type="separator" hidden="true" />
+			
+			<Field id="timeout" type="textfield" defaultValue="0" hidden="true">
+				<Label>Minutes until scene is automatically turned off (0 is never):</Label>
+			</Field>
+			
+			<Field id="sep3" type="separator" />
+			
+			<Field id="lbl3" type="label">
+				<Label>Enabling this option will update the scene to incorporate any changes made to the devices while the scene is active.  For example, if you turn on a light that was snapshotted as OFF while the scene is active then when you turn off the scene a new snapshot will be saved that now turns on that light.
+				
+Please be aware that UNCHECKING this box enables additional options below, be sure to scroll down!</Label>
+			</Field>
+			
+			<Field id="liveupdate" type="checkbox" defaultValue="True">
+				<Label>Live update:</Label>
+				<Description>Snapshot devices if changed when scene active</Description>
+			</Field>
+			
+			<Field id="sep4" type="separator"  hidden="true"/>
+			
+			<Field id="lbl4" type="label" hidden="true" visibleBindingId="liveupdate" visibleBindingValue="false">
+				<Label>By default when you turn off a scene all the devices will return to the pre-scene state.  You can enable the following checkbox so if you have a scene active and change a device in the scene (i.e., you turn on a light that the scene turned off) that device will not be reset to its original state when you turn the scene off but instead stays at the state you set it to while the scene was active.
+				</Label>
+			</Field>
+			
+			<Field id="override" type="checkbox" defaultValue="false" hidden="true" visibleBindingId="liveupdate" visibleBindingValue="false">
+				<Label>Manual override:</Label>
+				<Description>Enable manual override</Description>
+			</Field>
+			
+			<Field id="sep5" type="separator" visibleBindingId="liveupdate" visibleBindingValue="false" />
+			
+			<Field id="turnoff" type="checkbox" defaultValue="False">
+				<Label>Do not restore:</Label>
+				<Description>When scene is turned off then turn off all devices</Description>
+			</Field>
+			
+			<Field id="sep1" type="separator" visibleBindingId="liveupdate" visibleBindingValue="false"/>
+			
+			<Field id="actions" type="checkbox" defaultValue="False">
+				<Label>Actions:</Label>
+				<Description>Execute action groups on state change</Description>
+			</Field>
+			
+			<Field id="onBeforeTurnedOn" type="menu" visibleBindingId="actions" visibleBindingValue="true" >
+				<Label>Before turned on:</Label>
+				<List class="indigo.actionGroups" />
+			</Field>
+			
+			<Field id="onAfterTurnedOn" type="menu" visibleBindingId="actions" visibleBindingValue="true" >
+				<Label>After turned on:</Label>
+				<List class="indigo.actionGroups" />
+			</Field>
+			
+			<Field id="onBeforeTurnedOff" type="menu" visibleBindingId="actions" visibleBindingValue="true" >
+				<Label>Before turned off:</Label>
+				<List class="indigo.actionGroups" />
+			</Field>
+			
+			<Field id="onAfterTurnedOff" type="menu" visibleBindingId="actions" visibleBindingValue="true" >
+				<Label>After turned off:</Label>
+				<List class="indigo.actionGroups" />
+			</Field>
+			
+			<Field id="button2" type="button" tooltip="Clear all action groups" visibleBindingId="actions" visibleBindingValue="true">
+				<Label> </Label>
+				<Title>Clear Actions</Title>
+				<CallbackMethod>clearActionList</CallbackMethod>
+			</Field>
+			
+			<Field id="sep7" type="separator" visibleBindingId="liveupdate" visibleBindingValue="false"/>
+			
+			<Field id="lbl2" type="label" visibleBindingId="liveupdate" visibleBindingValue="false">
+				<Label>If your devices are already at the settings you want for this scene then take a snapshot now, otherwise just save this configuration and set all your devices and come back here and snapshot them.
+				
+The snapshot records the current settings for your devices so when you turn on this scene all those devices will be updated.  Remember to also include devices that are turned OFF so they are not left on when your scene is active.
+				</Label>
+			</Field>
+			
+			<Field id="button1" type="button" tooltip="Get a snapshot of the selected devices for the scene" visibleBindingId="liveupdate" visibleBindingValue="false">
+				<Label>Snapshot</Label>
+				<Title>Take Device Snapshot</Title>
+				<CallbackMethod>snapshotDeviceList</CallbackMethod>
+			</Field>
+			
+			<Field id="sep6" type="separator" />
+			
+			<Field id="lbl5" type="label" visibleBindingId="liveupdate" visibleBindingValue="true">
+				<Label>Because Live Update is enabled, you can now simply turn on the scene, set all of your device states and turn the scene off again, your setting will be saved for the next time you turn on this scene.
+				</Label>
+			</Field>
+			
+			<Field id="snapshot" type="list" hidden="true">
+				<Label>Saved settings:</Label>
+				<List>
+					<Option value="none">None</Option>
+				</List>
+			</Field>
+			
+			<Field id="memory" type="list" hidden="true">
+				<Label>Memory settings:</Label>
+				<List>
+					<Option value="none">None</Option>
+				</List>
+			</Field>
+			
+		</ConfigUI>
+		<States>
+			<State id="onOffState">
+				<ValueType boolType="OnOff">Boolean</ValueType>
+				<TriggerLabel>Scene state</TriggerLabel>
+				<ControlPageLabel>Scene state</ControlPageLabel>
+			</State>
+			
+			<State id="timeRemaining">
+				<ValueType>Number</ValueType>
+				<TriggerLabel>Active minutes remaining</TriggerLabel>
+				<ControlPageLabel>Active minutes remaining</ControlPageLabel>
+			</State>
+			
+			<State id="lastOnTime">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Last time scene turned on</TriggerLabel>
+				<ControlPageLabel>Last time scene turned on</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>onOffState</UiDisplayStateId>
+	</Device>
+</Devices>
