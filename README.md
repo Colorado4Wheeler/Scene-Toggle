@@ -11,7 +11,7 @@ For more information and documentation please visit http://forums.indigodomo.com
 
 Scene Toggle on Indigo 6
 -------------------
-If you are using Indigo 6 then you will need to install Scene Toggle version 1.1, that is the last Indigo 6 stable release.  No further development, short of major bug squashing, will be done for any version prior to 2.0.
+If you are using Indigo 6 then you will need to install Scene Toggle version 1.0, that is the last Indigo 6 stable release.  No further development, short of major bug squashing, will be done for any version prior to 2.0.
 
 About This Repo
 -------------------
