@@ -21,10 +21,17 @@ This repo is only for Indigo 7 while it is still in BETA, once Indigo 7 drops th
 Known Issues / Wish List
 -------------------
 * Add new device or modify existing to support dynamic sunrise/sunset dimming (see post in forum for Alarm Clock for user suggestion)
-* Totally re-write with current libraries, it was developed prior to standard libraries
-* Update everything for I7
+* Redesign device UI
 
 Beta Release Notes
 -------------------
-July 13, 2016: PENDING
-* Beta development on this release for I7 is pending
+July 13, 2016: Beta 1
+* Moved all device-specific commands to the Indigo device actions menu, left "clear all devices" in the top level menu
+* Added separators to actions to clean it up
+* Added standard PluginConfig.xml file
+* Changed Menuitems.xml to conform to standards
+* Re-titled all device actions now made redundant by converting to relay like on/off/toggle
+* Moved plugin to standard EPS architecture file
+* Removed redundant (and now invalid) onOffState
+
+* Added upgrade for previous versions to convert the previous "custom" device into a relay device for compatibility with other EPS plugins

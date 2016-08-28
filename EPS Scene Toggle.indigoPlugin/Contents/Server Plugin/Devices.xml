@@ -124,12 +124,6 @@ The snapshot records the current settings for your devices so when you turn on t
 			
 		</ConfigUI>
 		<States>
-			<State id="onOffState">
-				<ValueType boolType="OnOff">Boolean</ValueType>
-				<TriggerLabel>Scene state</TriggerLabel>
-				<ControlPageLabel>Scene state</ControlPageLabel>
-			</State>
-			
 			<State id="timeRemaining">
 				<ValueType>Number</ValueType>
 				<TriggerLabel>Active minutes remaining</TriggerLabel>
