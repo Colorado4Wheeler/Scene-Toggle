@@ -11,12 +11,12 @@ For more information and documentation please visit http://forums.indigodomo.com
 
 Scene Toggle on Indigo 6
 -------------------
-If you are using Indigo 6 then you will need to install Scene Toggle version 1.1, that is the last Indigo 6 stable release.  No further development, short of major bug squashing, will be done for any version prior to 2.0.
+If you are using Indigo 6 then you will need to install Scene Toggle version 1.0, that is the last Indigo 6 stable release.  No further development, short of major bug squashing, will be done for any version prior to 2.0.
 
 About This Repo
 -------------------
 
-This repo is only for Indigo 7 while it is still in BETA, once Indigo 7 drops this repo will merged into the main Powermiser repo.  Access to this repo is private and restricted only to participants in the Indigo 7 BETA, please do not distribute this copy to anyone not participating in the BETA testing.
+This repo is only for Indigo 7 while it is still in BETA, once Indigo 7 drops this repo will merged into the main Scene Toggle repo.  Access to this repo is private and restricted only to participants in the Indigo 7 BETA, please do not distribute this copy to anyone not participating in the BETA testing.
 
 Known Issues / Wish List
 -------------------
@@ -25,7 +25,8 @@ Known Issues / Wish List
 
 Beta Release Notes
 -------------------
-July 13, 2016: Beta 1
+<<<<<<< HEAD
+July 13, 2016: Beta 1a
 * Moved all device-specific commands to the Indigo device actions menu, left "clear all devices" in the top level menu
 * Added separators to actions to clean it up
 * Added standard PluginConfig.xml file
@@ -35,3 +36,7 @@ July 13, 2016: Beta 1
 * Removed redundant (and now invalid) onOffState
 
 * Added upgrade for previous versions to convert the previous "custom" device into a relay device for compatibility with other EPS plugins
+=======
+July 13, 2016: PENDING
+* Beta development on this release for I7 is pending
+>>>>>>> origin/master
